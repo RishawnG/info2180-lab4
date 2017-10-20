@@ -1,14 +1,12 @@
 
-
-document.getElementById("boundary1").addEventListener("mouseover", turnRed);
-document.getElementById("boundary1").addEventListener("mouseout", mouseOut);
-
-function turnRed(){
-	boundary1.setattribute(div.youlose())
+window.onload = function(){
+  document.getElementById("boundary1").addEventListener("mouseover", changeClass);
 }
 
 
 
+function changeClass() {
+    document.getElementById("boundary1").classList.add("youlose")
 
-
+};
 
