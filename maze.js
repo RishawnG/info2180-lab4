@@ -2,13 +2,6 @@
 window.onload = initialize;
 var state=true;
 
-/*
-function changeClass() {
-    document.getElementById("boundary1").classList.add("youlose")
-
-};
-*/
-
 function changeClass2() {
   state=false;
   var x = document.getElementsByClassName("boundary");
@@ -19,8 +12,8 @@ function changeClass2() {
 };
 
 function initialize(){
-  //document.getElementById("boundary1").addEventListener("mouseover", changeClass);
   document.getElementById("end").addEventListener("mouseover",youwin);
+  document.getElementById("start").addEventListener("click",changeClass);
   var x = document.querySelectorAll(".boundary");
   var i;
   for (i = 0; i < x.length; i++) {
@@ -34,3 +27,16 @@ function youwin(){
     alert("you win");
   }
 }
+
+
+function changeClass() {
+  state=true;
+  var x = document.querySelectorAll(".boundary");
+  console.log("test")
+  
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("youlose");
+  }
+
+};
